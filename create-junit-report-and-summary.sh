@@ -29,4 +29,4 @@ cat "${results_file}"|cargo2junit > junit-reports/TEST-all.xml
 
 
 SUMMARY="$(markdown-summary.sh ${results_file})"
-echo "::set-output name=summary::${SUMMARY}"
+echo "summary=${SUMMARY}" >> $GITHUB_OUTPUT
